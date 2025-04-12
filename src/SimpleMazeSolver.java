@@ -13,7 +13,17 @@ public class SimpleMazeSolver {
     static final int ROWS = 11;
     static final int COLS = 21;
 
+    static char[][] maze = new char[ROWS][COLS];
+
+    // Заполнение лабиринта стенами
+    static void createMaze() {
+        for (int i = 0; i < ROWS; i++) {
+            Arrays.fill(maze[i], WALL);
+        }
+    }
+
     public static void main(String[] args) {
-        // Лабиринт еще не реализован
+        // Лабиринт еще не генерируется, просто заполняется стенами
+        createMaze();
     }
 }
